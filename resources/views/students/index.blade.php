@@ -11,7 +11,7 @@
         <x-success-status class="mb-4" :status="session('message')" />
 
             <div class="px-4 py-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <table class="table table-bordered" >
+                <table class="table table-striped" >
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -48,6 +48,16 @@
 
                         @endforelse
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Student Email</th>
+                            <th>Student Phone</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
             <div class="px-2 py-2"> {{ $students->links() }} </div>
