@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,11 +25,15 @@ Route::get('/dashboard', function () {
 
 Route::controller(StudentController::class)->group(function () {
     Route::get('/students', 'index');
+    Route::get('/students', 'index');
     Route::get('/add-student', 'create');
     Route::post('/add-student', 'store');
     Route::get('/student/{student_id}/edit', 'edit');
     Route::put('/update-student/{student_id}', 'update');
     Route::delete('/student/{student_id}/delete', 'destroy');
+});
+Route::controller(UserController::class)->group(function () {
+    Route::get('/users', 'index');
 });
 
 require __DIR__.'/auth.php';
