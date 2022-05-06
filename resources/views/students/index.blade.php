@@ -50,6 +50,8 @@
                     </tbody>
                 </table>
             </div>
+            <div class="px-2 py-2"> {{ $students->links() }} </div>
         </div>
+
     </div>
 </x-app-layout>
